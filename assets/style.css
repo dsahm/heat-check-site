@@ -68,6 +68,13 @@ html[data-lang="de"] [lang="en"]:not(html) { display: none !important; }
 .badge { display: inline-flex; align-items: center; gap: 10px; margin-top: 36px; padding: 14px 24px; border-radius: 999px; background: var(--sunset); color: #1b1e30; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; font-size: 14px; }
 .badge::before { content: "\2665\FE0E"; font-size: 16px; }
 
+/* Screenshots */
+.screens-section { padding-top: 0; }
+.screens { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.screens figure { margin: 0; text-align: center; }
+.screens img { display: block; width: 100%; height: auto; border-radius: 28px; border: 1px solid var(--line); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45); }
+.screens figcaption { margin-top: 14px; color: var(--muted); font-size: 15px; }
+
 /* Sections */
 section { padding: 72px 0; }
 .eyebrow { color: var(--pink); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; font-size: 13px; margin: 0 0 12px; }
@@ -122,6 +129,10 @@ h2.display { font-size: clamp(40px, 7vw, 64px); margin: 0 0 16px; }
   .wrap { padding: 0 16px; }
   .hero { padding: 64px 0 56px; }
   section { padding: 56px 0; }
+  .screens { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; margin: 0 -16px; padding: 0 16px 8px; scrollbar-width: none; }
+  .screens::-webkit-scrollbar { display: none; }
+  .screens figure { flex: 0 0 62%; scroll-snap-align: center; }
+  .screens img { border-radius: 22px; }
   .tiers { grid-template-columns: 1fr; }
   .tier { display: grid; grid-template-columns: 96px 1fr; align-items: baseline; column-gap: 12px; }
   .tier .name { margin: 0; grid-row: 1; grid-column: 1; }
